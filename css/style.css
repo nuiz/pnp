@@ -1,0 +1,19 @@
+body {
+    font-family: JasmineUPC;
+    padding: 0;
+    margin: 0;
+}
+
+.pnp-gray-bg {
+    background-color: #4f453f;
+}
+
+.web-top-section {
+    height: 196px;
+    width: 100%;
+}
+
+.wrap {
+    width: 960px;
+    margin: 0 auto;
+}
