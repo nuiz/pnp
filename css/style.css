@@ -5,6 +5,10 @@ html,body{
     font-family: JasmineUPC;
     font-size: 18px;
     /* font-family:"tahoma",Times New Roman,verdana,helvetica,arial,sans-serif; */
+
+    /** smooth font for chrome **/
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
 /** utoolity **/
@@ -45,8 +49,6 @@ html,body{
     width:100%;
 }
 .fixed-footer {
-    position: fixed;
-    bottom: 0;
     width:100%;
     height: 36px;
     line-height: 36px;
@@ -55,6 +57,9 @@ html,body{
     font-size: 23px;
     color: white;
     font-weight: bold;
+}
+.container {
+    min-height: 654px;
 }
 
 #logo{

@@ -37,7 +37,7 @@
             </div>
         </div>
     </div>
-    <div class="wrapper">
+    <div class="wrapper container">
         <?php $page = isset($_GET['page'])? $_GET['page']: 'home'; include("page/".$page.'.php'); ?>
     </div>
     <div class="wrapper">
@@ -51,7 +51,6 @@
             <a href="index.php?page=contact"></a>
         </div>
     </div>
-    <div style="height: 54px;"></div>
     <div class="fixed-footer">
         Copyright © 2014 by www.polocolour.com  All Rights Reserved.
     </div>
