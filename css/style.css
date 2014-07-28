@@ -4,6 +4,24 @@ body {
     margin: 0;
 }
 
+/** utoolity **/
+
+.wrapper{
+    width:960px;
+    margin:0 auto;
+}
+.pull-left{
+    float:left;
+}
+.pull-right{
+    float:right;
+}
+.clearfix{
+    clear:both;
+}
+
+/** main layout **/
+
 .pnp-gray-bg {
     background-color: #4f453f;
 }
@@ -13,7 +31,50 @@ body {
     width: 100%;
 }
 
-.wrap {
-    width: 960px;
-    margin: 0 auto;
+#logo{
+    width:145px;
+    height:156px;
+}
+#social_top{
+    width:160px;
+    height:156px;
+}
+#navigation{
+    width:960px;
+    height:40px;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width:100%;
+}
+#bg_header{
+    background: url(images/01home_03.jpg) no-repeat;
+}
+#navigation a{
+    display:block;
+    float:left;
+    height:40px;
+}
+#navigation a{
+    width:125px;
+}
+#navigation a+a{
+    width:130px;
+}
+#navigation a+a+a{
+    width:175px;
+}
+#navigation a+a+a+a{
+    width:118px;
+}
+#navigation a+a+a+a+a{
+    width:152px;
+}
+#navigation a+a+a+a+a+a{
+    width:89px;
+}
+#navigation a+a+a+a+a+a+a{
+    width:171px;
 }
