@@ -29,20 +29,6 @@
         </div>
     </div>
 </div>
-<script>
-    jQuery(document).ready(function ($) {
-        var options = {
-            $BulletNavigatorOptions: {
-                $Class: $JssorBulletNavigator$,
-                $ChanceToShow: 2,
-                $AutoCenter: 1,
-                $SpacingX: 10
-            },
-            $AutoPlay: true
-        };
-        var jssor_slider1 = new $JssorSlider$('slider1_container', options);
-    });
-</script>
 <style type="text/css">
 .bt-t {
     margin-left: 15px;
