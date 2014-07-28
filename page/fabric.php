@@ -23,12 +23,12 @@
     </div>
 </div>
 <style type="text/css">
-    .fab-content {
-        width: 690px;
-        font-size: 22px;
-        color: #4f453f;
-    }
-    .fab-content p {
-        padding: 0 28px;
-    }
+.fab-content {
+    width: 690px;
+    font-size: 22px;
+    color: #4f453f;
+}
+.fab-content p {
+    padding: 0 28px;
+}
 </style>
