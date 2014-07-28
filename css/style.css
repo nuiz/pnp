@@ -1,7 +1,10 @@
-body {
+html,body{
+    margin:0 auto;
+    padding:0;
+    text-align:left;
     font-family: JasmineUPC;
-    padding: 0;
-    margin: 0;
+    font-size: 18px;
+    /* font-family:"tahoma",Times New Roman,verdana,helvetica,arial,sans-serif; */
 }
 
 /** utoolity **/
@@ -31,6 +34,29 @@ body {
     width: 100%;
 }
 
+.web-bottom-section {
+    height: 36px;
+    width: 100%;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width:100%;
+}
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    height: 36px;
+    line-height: 36px;
+    background: url(images/footerbg.jpg) repeat-x;
+    text-align: center;
+    font-size: 23px;
+    color: white;
+    font-weight: bold;
+}
+
 #logo{
     width:145px;
     height:156px;
@@ -44,11 +70,6 @@ body {
     height:40px;
 }
 
-.fixed-header {
-    position: fixed;
-    top: 0;
-    width:100%;
-}
 #bg_header{
     background: url(images/01home_03.jpg) no-repeat;
 }
@@ -77,4 +98,39 @@ body {
 }
 #navigation a+a+a+a+a+a+a{
     width:171px;
+}
+
+/** footer **/
+#bt-nav {
+    margin-top: 20px;
+    background: url(images/01home_18.jpg);
+    height: 49px;
+    padding-left: 119px;
+}
+
+#bt-nav a{
+    display:block;
+    float:left;
+    height:40px;
+}
+#bt-nav a{
+    width:74px;
+}
+#bt-nav a+a{
+    width:111px;
+}
+#bt-nav a+a+a{
+    width:148px;
+}
+#bt-nav a+a+a+a{
+    width:103px;
+}
+#bt-nav a+a+a+a+a{
+    width:122px;
+}
+#bt-nav a+a+a+a+a+a{
+    width:74px;
+}
+#bt-nav a+a+a+a+a+a+a{
+    width:104px;
 }
