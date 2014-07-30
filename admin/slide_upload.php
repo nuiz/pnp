@@ -6,3 +6,4 @@ foreach($_FILES['ufile']['name'] as $key => $value){
     $file['tmp_name'] = $_FILES['ufile']['tmp_name'][$key];
     Manager::addPicture($file);
 }
+header( 'Location: index.php' );

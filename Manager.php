@@ -57,4 +57,19 @@ class Manager {
             "seq"=> 1
         ));
     }
+
+    public static function delPicture($id) {
+        $cn = self::getCn();
+        $sql = "DELETE FROM slide WHERE id = ".$id;
+        $cn->query($sql);
+    }
+
+    public function getSlidePicture () {
+        $cn = self::getCn();
+        $sql = "SELECT * FROM slide";
+        return $cn->query($sql);
+
+    }
+
+
 } 
