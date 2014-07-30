@@ -1,4 +1,4 @@
 <?php
 require_once '../Manager.php';
-Manager::delPicture($_GET['id']);
+Manager::delProductById($_GET['id']);
 header( 'Location: index.php?page=product' );

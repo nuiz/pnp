@@ -64,12 +64,80 @@ class Manager {
         $cn->query($sql);
     }
 
-    public function getSlidePicture () {
+    public static function getSlidePicture () {
         $cn = self::getCn();
         $sql = "SELECT * FROM slide";
         return $cn->query($sql);
 
     }
 
+    public static function addProduct ($file,$product_name,$product_group_id) {
+        $setting = self::getSetting();
+        $dir = $setting['upload_dir'];
+
+        if(!is_file($file['tmp_name'])){
+            return false;
+        }
+
+        $allowed =  array('gif','png' ,'jpg', 'pdf');
+        $filename = $file['name'];
+        $ext = pathinfo($filename, PATHINFO_EXTENSION);
+        if(!in_array($ext,$allowed) ) {
+            return false;
+        }
+
+        $name = uniqid().".".$ext;
+        $path = $dir.'/'.$name;
+        move_uploaded_file($file['tmp_name'], $path);
+
+        $cn = self::getCn();
+        $sql = "INSERT INTO product(path, product_name , product_group_id) VALUES(:path, :product_name, :product_group_id)";
+        $st = $cn->prepare($sql);
+        $st->execute(array(
+            "path"=> $name,
+            "product_name"=> $product_name,
+            "product_group_id" =>$product_group_id
+        ));
+    }
+    public static function addProductGroupId ($id,$product_name) {
+        $cn = self::getCn();
+        $sql = "INSERT INTO product_group_id(product_group_id,product_name) VALUES(:product_group_id,:product_name)";
+        $st = $cn->prepare($sql);
+        $st->execute(array(
+            "product_group_id" =>$id,
+            "product_name" => $product_name
+        ));
+    }
+    public static function getProduct () {
+        $cn = self::getCn();
+        $sql = "SELECT * FROM product";
+        return $cn->query($sql);
+    }
+
+    public static function getProductByGroupId ($id) {
+        $cn = self::getCn();
+        $sql = "SELECT * FROM product where product_group_id = ".$id;
+        return $cn->query($sql);
+    }
+
+    public static function getProductGroupId () {
+        $cn = self::getCn();
+        $sql = "SELECT * FROM product_group_id";
+        return $cn->query($sql);
+    }
+
+    public static function delProductById ($id) {
+        $cn = self::getCn();
+        $sql = "DELETE FROM product WHERE id = ".$id;
+        $cn->query($sql);
+    }
+
+    public static function delProductByGroupId ($id) {
+        $cn = self::getCn();
+        $sql = "DELETE FROM product WHERE product_group_id = ".$id;
+        $cn->query($sql);
+        $sql2 = "DELETE FROM product_group_id WHERE product_group_id = ".$id;
+        $cn->query($sql2);
+    }
 
 } 

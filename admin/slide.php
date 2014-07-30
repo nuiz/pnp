@@ -1,6 +1,5 @@
 <?php
 require_once '../Manager.php';
-$r = Manager::getSlidePicture();
 ?>
 <style>
     .picture-ul {
@@ -8,7 +7,10 @@ $r = Manager::getSlidePicture();
     }
     .picture-ul li img{
         width: 300px;
-        height: auto;
+        margin: 10px;
+        -webkit-box-shadow: 4px 6px 3px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: 4px 6px 3px 0px rgba(0,0,0,0.25);
+        box-shadow: 4px 6px 3px 0px rgba(0,0,0,0.25);
     }
 </style>
 <div class="page-header">

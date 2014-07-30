@@ -26,7 +26,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">PNP Admin</a>
+            <a class="navbar-brand" href="../index.php">PNP Home</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -39,7 +39,6 @@
 
 <div class="container" style="margin-top: 60px">
     <?php $page = isset($_GET['page'])? $_GET['page']: 'slide'; include($page.'.php'); ?>
-
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
