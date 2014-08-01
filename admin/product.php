@@ -57,7 +57,18 @@ HTML;
     foreach (Manager::getProductGroupId() as $r) {
         echo <<<HTML
         <div style="font-size: 30px;font-weight: bolder;">Product Name : {$r['product_name']}<a href="del_product_group.php?id={$r['product_group_id']}" class="btn btn-warning btn-large" style="margin-left: 20px;"><i class="icon-white icon-remove"></i> Remove Group</a></div>
+        <div><img src="../pictures/{$r['thumbnail']}" style="width: 300px;-webkit-box-shadow: 4px 6px 3px 0px rgba(0,0,0,0.25);-moz-box-shadow: 4px 6px 3px 0px rgba(0,0,0,0.25);box-shadow: 4px 6px 3px 0px rgba(0,0,0,0.25);margin: 20px;"/></div>
+        <div>
+            <form action="upload_thumbnail.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
+            <input type="hidden" name="product_group_id" id="product_group_id" value="{$r['product_group_id']}">
+            <input name="ufile[]" type="file" id="ufile" multiple style="display: inline-block;width: 200px;">
+            <input type="submit" value="Upload Image">
+        </form>
+        </div>
+        <hr>
+        <div style="font-size: 20px;">Product Gallery</div>
 HTML;
+
         foreach (Manager::getProductByGroupId($r['product_group_id']) as $a ) {
             echo <<<HTML
     <li><img src="../pictures/{$a['path']}"/><br><a href="del_product_picture.php?id={$a['id']}" class="btn btn-danger btn-large"><i class="icon-white icon-remove"></i> Remove</a></li>

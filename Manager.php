@@ -140,4 +140,27 @@ class Manager {
         $cn->query($sql2);
     }
 
+    public static function addProductThumbnail ($file,$product_group_id) {
+        $setting = self::getSetting();
+        $dir = $setting['upload_dir'];
+
+        if(!is_file($file['tmp_name'])){
+            return false;
+        }
+
+        $allowed =  array('gif','png' ,'jpg', 'pdf');
+        $filename = $file['name'];
+        $ext = pathinfo($filename, PATHINFO_EXTENSION);
+        if(!in_array($ext,$allowed) ) {
+            return false;
+        }
+
+        $name = uniqid().".".$ext;
+        $path = $dir.'/'.$name;
+        move_uploaded_file($file['tmp_name'], $path);
+        $cn = self::getCn();
+        $sql = "UPDATE product_group_id SET thumbnail = '".$name."' WHERE product_group_id = '".$product_group_id."'";
+        $cn->query($sql);
+    }
+
 } 

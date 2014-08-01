@@ -1,0 +1,1 @@
+ALTER TABLE `product_group_id` ADD `thumbnail` VARCHAR(255) NOT NULL ;
