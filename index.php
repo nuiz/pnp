@@ -20,8 +20,8 @@
     <![endif]-->
 </head>
 <body>
-    <div class="pnp-gray-bg web-top-section"></div>
-    <div class="fixed-header">
+    <div class="web-top-section"></div>
+    <div class="fixed-header pnp-gray-bg">
         <div id="bg_header" class="wrapper">
             <a href=""><div id="logo" class="pull-left"></div></a>
             <div id="social_top" class="pull-right"><a href="" style="display: block; height: 100%;"></a></div>

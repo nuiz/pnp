@@ -5,6 +5,7 @@
  * Date: 7/28/14
  * Time: 9:08 AM
  */
+require_once 'Manager.php';
 ?>
 <script type="text/javascript" src="js/jssor.core.js"></script>
 <script type="text/javascript" src="js/jssor.utils.js"></script>
@@ -15,9 +16,14 @@
         <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 960px; height: 400px;">
             <!-- Slides Container -->
             <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 960px; height: 400px;">
-                <div><img u="image" src="images/home/slider/01home_07.jpg" /></div>
-                <div><img u="image" src="images/home/slider/01home_07.jpg" /></div>
-                <div><img u="image" src="images/home/slider/01home_07.jpg" /></div>
+                <?php
+                $slidePics = Manager::getSlidePicture();
+                foreach($slidePics as $key => $pic){
+                    echo <<<HTML
+                <div><img u="image" src="pictures/{$pic['path']}" /></div>
+HTML;
+                }
+                ?>
             </div>
 
             <!-- Bullet Navigator Skin Begin -->
@@ -72,6 +78,7 @@
                 $AutoCenter: 1,
                 $SpacingX: 10
             },
+            $FillMode: 2,
             $AutoPlay: true
         };
         var jssor_slider1 = new $JssorSlider$('slider1_container', options);
