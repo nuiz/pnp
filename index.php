@@ -5,12 +5,11 @@ session_start();
 <html>
 <head>
     <meta charset="utf-8">
-
+    <title>PNP : TEXTILE CO., LTD</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swipebox.min.css">
-
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/jquery.swipebox.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <!--[if lt IE 9]>
