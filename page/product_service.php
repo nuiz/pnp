@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Papangping
- * Date: 7/28/14
- * Time: 9:08 AM
- */
+require_once 'Manager.php';
 ?>
 <div>
     <div class="pnp-gray-bg" style="height: 25px;"></div>

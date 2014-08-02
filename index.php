@@ -1,19 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Papangping
- * Date: 7/28/14
- * Time: 5:46 AM
- */
+session_start();
 ?>
 <!DOCTYPE>
 <html>
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swipebox.min.css">
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
+    <script src="js/jquery.swipebox.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
