@@ -76,29 +76,31 @@ require_once 'Manager.php';
             ตัวอย่างลูกค้าของเรา
             <hr>
         </div>
-        <div>
+        <div id="list-pd">
             <?php
             foreach (Manager::getProductGroupOffSet(0) as $r) {
-                echo <<<HTML
-                <div class="ex-item" style="text-align: center;">
-                <div>
-                    <a rel="{$r['product_group_id']}" href="pictures/{$r['thumbnail']}" class="swipebox" >
-                    <img src="pictures/{$r['thumbnail']}" width="460" alt="image" height="240" id="{$r['product_group_id']}">
-
-                    </a>
-                </div>
-                <div class="ex-item-name">{$r['product_name']}</div>
-                <hr>
-            </div>
-HTML;
+                $picsHTML = "";
                 foreach (Manager::getProductByGroupId($r['product_group_id']) as $a ) {
-                    echo <<<HTML
+                    $picsHTML .= <<<HTML
                     <a rel="{$a['product_group_id']}" href="pictures/{$a['path']}" class="swipebox" style="display: none;">
 	                    <img src="pictures/{$a['path']}" alt="image">
                     </a>
 HTML;
 
                 }
+                echo <<<HTML
+            <div class="ex-item" style="text-align: center;">
+                <div>
+                    <a rel="{$r['product_group_id']}" href="pictures/{$r['thumbnail']}" class="swipebox" >
+                    <img src="pictures/{$r['thumbnail']}" width="460" alt="image" height="240" id="{$r['product_group_id']}">
+
+                    </a>
+                    {$picsHTML}
+                </div>
+                <div class="ex-item-name">{$r['product_name']}</div>
+                <hr>
+            </div>
+HTML;
             }
 
             ?>
@@ -115,9 +117,10 @@ HTML;
             <?php //}?>
         </div>
         -->
-        <div style="text-align: center"><a href="#" class="myButton">Load more...</a></div>
-        <div class="clearfix"></div>
     </div>
+    <div class="clearfix"></div>
+    <div style="text-align: center"><a href="#" class="myButton loadmore">Load more...</a></div>
+    <div class="clearfix"></div>
 </div>
 <style type="text/css">
 .bt-t {
@@ -157,17 +160,42 @@ HTML;
     font-size: 30px;
 }
 </style>
-    <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-            $( '.swipebox' ).swipebox( {
-                useCSS : true, // false will force the use of jQuery for animations
-                useSVG : false, // false to force the use of png for buttons
-                hideBarsOnMobile : true, // false will show the caption and navbar on mobile devices
-                hideBarsDelay : 3000, // delay before hiding bars
-                videoMaxWidth : 1140, // videos max width
-                beforeOpen: function() {}, // called before opening
-                afterClose: function() {} // called after closing
-            } );
+<script type="text/javascript">
+jQuery(document).ready(function ($) {
+    $('.swipebox' ).swipebox({
+        useCSS : true, // false will force the use of jQuery for animations
+        useSVG : false, // false to force the use of png for buttons
+        hideBarsOnMobile : true, // false will show the caption and navbar on mobile devices
+        hideBarsDelay : 3000, // delay before hiding bars
+        videoMaxWidth : 1140, // videos max width
+        beforeOpen: function() {}, // called before opening
+        afterClose: function() {} // called after closing
+    });
 
+    var page = 0;
+    var listEl = $('#list-pd');
+    $('.loadmore').click(function(e){
+        e.preventDefault();
+        page++;
+        $.get("loadmore.php?page="+page, function(data){
+            for(var i in data){
+                listEl.append(appendItem(data[i]));
+            }
+        }, 'json');
+    });
+
+    function appendItem(html){
+        var item = $(html);
+        listEl.append(item);
+        $('.swipebox', item).swipebox({
+            useCSS : true, // false will force the use of jQuery for animations
+            useSVG : false, // false to force the use of png for buttons
+            hideBarsOnMobile : true, // false will show the caption and navbar on mobile devices
+            hideBarsDelay : 3000, // delay before hiding bars
+            videoMaxWidth : 1140, // videos max width
+            beforeOpen: function() {}, // called before opening
+            afterClose: function() {} // called after closing
         });
-    </script>
+    }
+});
+</script>
