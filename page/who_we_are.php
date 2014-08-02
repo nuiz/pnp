@@ -29,6 +29,7 @@
         </div>
     </div>
 </div>
+<div class="clearfix"></div>
 <style type="text/css">
 .bt-t {
     margin-left: 15px;

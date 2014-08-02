@@ -5,8 +5,10 @@ session_start();
 <html>
 <head>
     <meta charset="utf-8">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swipebox.min.css">
+
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/jquery.swipebox.min.js"></script>

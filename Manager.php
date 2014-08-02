@@ -163,9 +163,10 @@ class Manager {
         $cn->query($sql);
     }
 
-    public static function getProductOffSet($offset) {
+
+    public static function getProductGroupOffSet($offset) {
         $cn = self::getCn();
-        $sql = "SELECT * FROM `product` LIMIT 2 OFFSET ".$offset;
+        $sql = "SELECT * FROM `product_group_id` LIMIT 2 OFFSET ".$offset;
         return $cn->query($sql);
     }
 
