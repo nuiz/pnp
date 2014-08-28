@@ -17,6 +17,7 @@ html,body{
     width:960px;
     margin:0 auto;
 }
+
 .pull-left{
     float:left;
 }
@@ -48,16 +49,15 @@ html,body{
     top: 0;
     width:100%;
     z-index: 1000;
-    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.09);
 }
 .fixed-footer {
     width:100%;
-    height: 36px;
-    line-height: 36px;
-    background: url(images/footerbg.jpg) repeat-x;
+    line-height: 20px;
+    background: url(images/footerbg.jpg) repeat;
     text-align: center;
     font-size: 23px;
     color: white;
+    padding: 8px 0;
     font-weight: bold;
 }
 .container {
@@ -79,6 +79,7 @@ html,body{
 
 #bg_header{
     background: url(images/01home_03.jpg) no-repeat;
+    height: 196px;
 }
 #navigation a{
     display:block;
@@ -140,4 +141,188 @@ html,body{
 }
 #bt-nav a+a+a+a+a+a+a{
     width:104px;
+}
+
+
+@media all and (max-width: 768px) {
+    html, body {
+        width: 768px;
+        overflow: hidden;
+    }
+
+    .wrapper {
+        width: 768px;
+        margin:0 auto;
+    }
+
+    .web-top-section {
+        display: none;
+    }
+
+    .fixed-header {
+        position: static;
+    }
+
+
+    #bt-nav a{
+        width: auto;
+    }
+    #bt-nav a+a{
+        width: auto;
+    }
+    #bt-nav a+a+a{
+        width: auto;
+    }
+    #bt-nav a+a+a+a{
+        width: auto;
+    }
+    #bt-nav a+a+a+a+a{
+        width: auto;
+    }
+    #bt-nav a+a+a+a+a+a{
+        width: auto;
+    }
+    #bt-nav a+a+a+a+a+a+a{
+        width: auto;
+    }
+
+    .web-bottom-section { display: none; }
+}
+
+@media all and (max-width: 320px) {
+    html, body {
+        width: 320px;
+        overflow: hidden;
+    }
+
+    .wrapper {
+         width: 320px;
+         margin:0 auto;
+     }
+
+    #bg_header {
+        height: 98px;
+        background: url(images/header_320.jpg);
+        position: relative;
+
+        overflow: hidden;
+
+        -webkit-transition: height 500ms;
+        -moz-transition:  height 500ms;
+        -ms-transition:  height 500ms;
+        -o-transition:  height 500ms;
+        transition:  height 500ms;
+    }
+
+    #bg_header.open {
+        height: 320px;
+    }
+
+    #social_top {
+        height: 0;
+    }
+
+    .toggle-header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+    }
+
+    #navigation {
+        position: absolute;
+        width: 320px;
+        top: 110px;
+        height: auto;
+    }
+
+    #navigation a{
+        display: block;
+        float: none;
+        height: 30px;
+    }
+    #navigation a{
+        width: 100%;
+    }
+    #navigation a+a{
+        width: 100%;
+    }
+    #navigation a+a+a{
+        width: 100%;
+    }
+    #navigation a+a+a+a{
+        width: 100%;
+    }
+    #navigation a+a+a+a+a{
+        width: 100%;
+    }
+    #navigation a+a+a+a+a+a{
+        width: 100%;
+    }
+    #navigation a+a+a+a+a+a+a{
+        width: 100%;
+    }
+
+    /*****************/
+
+    .fixed-footer {
+        position: static;
+        width:100%;
+        line-height: 20px;
+        background: url(images/footerbg.jpg) repeat;
+        text-align: center;
+        font-size: 23px;
+        color: white;
+        padding: 16px;
+        font-weight: normal;
+        box-sizing: border-box;
+    }
+
+    #bt-nav {
+        margin-top: 20px;
+        background: url(images/bt_320.jpg);
+        height: 109px;
+        position: relative;
+    }
+
+    #bt-nav a{
+        position: absolute;
+        display: block;
+        height: 28px;
+
+        width: 83px;
+        left: 40px;
+        top: 14px;
+    }
+    #bt-nav a+a{
+        width: 110px;
+        left: 123px;
+        top: 13px;
+    }
+    #bt-nav a+a+a{
+        width: 138px;
+        left: 23px;
+        top: 40px;
+    }
+    #bt-nav a+a+a+a{
+        width: 100px;
+        left: 162px;
+        top: 40px;
+    }
+    #bt-nav a+a+a+a+a{
+        width: 100px;
+        left: 20px;
+        top: 67px;
+    }
+    #bt-nav a+a+a+a+a+a{
+        width: 71px;
+        left: 133px;
+        top: 67px;
+    }
+    #bt-nav a+a+a+a+a+a+a{
+        width: 100px;
+        left: 206px;
+        top: 67px;
+    }
 }

@@ -31,11 +31,11 @@
                 <label>Fax:</label> 02-809-8383<br />
             </p>
         </div>
-        <div class="pull-right" style="width: 622px;">
+        <div class="right-content">
             <div class="hmap">แผนที่มาโรงงาน</div>
             <!--<div id="gmap-canvas"></div>-->
-            <iframe src="https://mapsengine.google.com/map/embed?mid=zsgQiQEnpBnk.kRR0j5ngGiQE" width="622" height="478" frameborder="0" style="border:0"></iframe>
-            <div><img src="images/contact/07ContactUs_07.jpg"></div>
+            <iframe class="gmap-iframe" src="https://mapsengine.google.com/map/embed?mid=zsgQiQEnpBnk.kRR0j5ngGiQE" frameborder="0"></iframe>
+            <div class="gmap-shadow"></div>
             <div style="text-align: center; font-size: 22px;">
                 ดู PNP Textitle Co.,Ltd ใน<a target="_blank" href="https://mapsengine.google.com/map/embed?mid=zsgQiQEnpBnk.kRR0j5ngGiQE" class="orange">แผนที่</a>ขนาดใหญ่
             </div>
@@ -74,6 +74,44 @@
 }
 a.orange {
     text-decoration: none;
+}
+
+.gmap-iframe {
+    width: 622px;
+    height: 478px;
+}
+
+
+.right-content {
+    float: right;
+    width: 622px;
+}
+
+.gmap-shadow {
+    background: url(images/contact/07ContactUs_07.jpg);
+    background-size: 100%;
+    width: 621px;
+    height: 28px;
+}
+
+@media all and (max-width: 320px) {
+    .gmap-iframe {
+        width: 300px;
+        height: 230px;
+        margin: 0 auto;
+    }
+
+    .gmap-shadow {
+        width: 300px;
+        height: 12px;
+    }
+
+    .right-content {
+        float: none;
+        clear: both;
+        margin: 0 auto;
+        width: 300px;
+    }
 }
 </style>
 <script type="text/javascript">

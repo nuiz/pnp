@@ -11,8 +11,29 @@
     <div>
         <img src="images/chart/04SizeChart_03.jpg">
     </div>
-    <div>
+    <div class="chart">
         <img src="images/chart/04SizeChart_05.jpg">
         <img src="images/chart/04SizeChart_06.jpg">
     </div>
+    <div class="chart320">
+        <img src="images/chart/SizeChart_320.jpg">
+    </div>
 </div>
+<style type="text/css">
+    .chart {
+        display: block;
+    }
+
+    .chart320 {
+        display: none;
+    }
+@media all and (max-width: 320px) {
+    .chart {
+        display: none;
+    }
+
+    .chart320 {
+        display: block;
+    }
+}
+</style>

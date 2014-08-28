@@ -12,7 +12,7 @@
         <img src="images/wwa/wwa-header.jpg">
     </div>
     <div>
-        <div class="pull-left wwa-content" style="width: 546px; padding: 0 28px;">
+        <div class="pull-left wwa-content" style="">
             <p>เราเป็นผู้ผลิตและจำหน่ายเสื้อยืดโปโล และ เสื้อยืดคอกลม พร้อมบริการปักโลโก้และสกรีนลาย
                 เพื่อใช้ในทุกโอกาส เช่น เสื้อพนักงาน เสื้อบริษัท เสื้อกีฬาสี เสื้อโฆษณา เสื้อส่งเสริมการขาย
                 เสื้อชมรม เสื้อสโมสร เสื้อสถาบัน  เราให้บริการรับผลิตเสื้อตามแบบดีไซน์ที่ลูกค้าต้องการและ
@@ -29,6 +29,7 @@
         </div>
     </div>
 </div>
+<div class="clearfix"></div>
 <style type="text/css">
 .bt-t {
     margin-left: 15px;
@@ -36,8 +37,16 @@
 }
 .wwa-content {
     font-size: 21px;
+    width: 546px;
+    padding: 0 28px;
 }
 .wwa-content p {
     margin-top: 30px;
+}
+
+@media all and (max-width: 320px) {
+    .wwa-content {
+        width: auto;
+    }
 }
 </style>
