@@ -66,7 +66,7 @@ HTML;
         </form>
         </div>
         <hr>
-        <div style="font-size: 20px;">Product Gallery</div>
+        <div style="font-size: 20px;">Product Gallery : {$r['product_name']}</div>
 HTML;
 
         foreach (Manager::getProductByGroupId($r['product_group_id']) as $a ) {
