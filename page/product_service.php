@@ -182,6 +182,21 @@ HTML;
                 margin-left: auto;
             }
         }
+
+        @media all and (min-width:321px) and (max-width: 768px) {
+            .ex-item-img {
+                /*width: 150px;*/
+            }
+
+            .ex-item {
+                width: 356px;
+                margin-left: 28px;
+            }
+
+            .ex-item:nth-child(2n-1){
+                margin-left: 28px;
+            }
+        }
     </style>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {

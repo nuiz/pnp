@@ -18,6 +18,9 @@
     <div class="chart320">
         <img src="images/chart/SizeChart_320.jpg">
     </div>
+    <div class="chart768">
+        <img src="images/chart/SizeChart_768.jpg">
+    </div>
 </div>
 <style type="text/css">
     .chart {
@@ -27,12 +30,31 @@
     .chart320 {
         display: none;
     }
+    .chart768 {
+        display: none;
+    }
 @media all and (max-width: 320px) {
     .chart {
         display: none;
     }
 
     .chart320 {
+        display: block;
+    }
+    .chart768 {
+        display: none;
+    }
+}
+
+@media all and (min-width:321px) and (max-width: 768px) {
+    .chart {
+        display: none;
+    }
+
+    .chart320 {
+        display: none;
+    }
+    .chart768 {
         display: block;
     }
 }

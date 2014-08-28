@@ -12,7 +12,7 @@
         <img src="images/contact/07ContactUs_03.jpg">
     </div>
     <div>
-        <div class="pull-left ct-content" style="width: 338px;">
+        <div class="pull-left ct-content">
             <p>
                 <strong class="hder">
                     บริษัท พี.เอ็น.พี เท็กซ์ไทล์ จำกัด
@@ -60,6 +60,7 @@
     padding-top: 47px;
     font-size: 21px;
     color: #4f453f;
+    width: 338px;
 }
 .ct-content p {
     padding: 0 28px;
@@ -111,6 +112,40 @@ a.orange {
         clear: both;
         margin: 0 auto;
         width: 300px;
+    }
+}
+@media all and (min-width:321px) and (max-width: 768px) {
+    .ct-content {
+        float: none;
+        width: auto;
+    }
+
+    .ct-content br {
+        display: none;
+    }
+    .ct-content p {
+        margin: 0;
+    }
+    .hder {
+        display: block;
+    }
+
+    .gmap-iframe {
+        width: 720px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    .gmap-shadow {
+        width: 720px;
+        height: 12px;
+    }
+
+    .right-content {
+        float: none;
+        clear: both;
+        margin: 0 auto;
+        width: 720px;
     }
 }
 </style>

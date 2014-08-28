@@ -5,6 +5,7 @@
  * Date: 7/28/14
  * Time: 9:08 AM
  */
+require_once 'Manager.php';
 ?>
 <script type="text/javascript" src="js/jssor.core.js"></script>
 <script type="text/javascript" src="js/jssor.utils.js"></script>
@@ -33,9 +34,14 @@
         <div id="slider1_container" style="position: relative; top: 0px; left: 0px;">
             <!-- Slides Container -->
             <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px;">
-                <div><img u="image" src="images/home/slider/01home_07.jpg" /></div>
-                <div><img u="image" src="images/home/slider/01home_07.jpg" /></div>
-                <div><img u="image" src="images/home/slider/01home_07.jpg" /></div>
+                <?php
+                $slidePics = Manager::getSlidePicture();
+                foreach($slidePics as $key => $pic){
+                    echo <<<HTML
+                <div><img u="image" src="pictures/{$pic['path']}" /></div>
+HTML;
+                }
+                ?>
             </div>
 
             <!-- Bullet Navigator Skin Begin -->
@@ -73,7 +79,7 @@
             </script>
         </div>
         <div style="height: 54px;"></div>
-        <div>
+        <div class="hct">
             <div class="pull-left bt-t first"><img src="images/home/1/01home_09.jpg"><img src="images/home/1/01home_14.jpg"></div>
             <div class="pull-left bt-t"><img src="images/home/1/01home_11.jpg"><img src="images/home/1/01home_14.jpg"></div>
             <div class="pull-left bt-t"><img src="images/home/1/01home_13.jpg"><img src="images/home/1/01home_14.jpg"></div>
@@ -101,7 +107,7 @@
     width: 310px;
 }
 .bt-t.first {
-    margin-left: 15px;
+    margin-left: 0;
 }
 
 @media all and (max-width: 320px) {
@@ -112,6 +118,15 @@
     .bt-t {
         margin: 0 auto;
         padding: 0 5px;
+    }
+}
+
+@media all and (min-width:321px) and (max-width: 768px) {
+    .hct {
+        padding: 0 47px;
+    }
+    .bt-t.first {
+        margin-left: 15px;
     }
 }
 </style>

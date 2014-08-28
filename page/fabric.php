@@ -24,6 +24,9 @@
     <div class="fab-warp320">
         <img src="images/fab/Fabric_320.jpg">
     </div>
+    <div class="fab-warp768">
+        <img src="images/fab/Fabric_768.jpg">
+    </div>
 </div>
 <style type="text/css">
 .fab-content {
@@ -42,6 +45,9 @@
 .fab-warp320 {
     display: none;
 }
+.fab-warp768 {
+    display: none;
+}
 
 @media all and (max-width: 320px) {
     .fab-warp {
@@ -51,5 +57,22 @@
     .fab-warp320 {
         display: block;
     }
+    .fab-warp768 {
+        display: none;
+    }
+
+}
+@media all and (min-width:321px) and (max-width: 768px) {
+    .fab-warp {
+        display: none;
+    }
+
+    .fab-warp320 {
+        display: none;
+    }
+    .fab-warp768 {
+        display: block;
+    }
+
 }
 </style>

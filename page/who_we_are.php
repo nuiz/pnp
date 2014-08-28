@@ -49,4 +49,10 @@
         width: auto;
     }
 }
+
+@media all and (min-width:321px) and (max-width: 768px) {
+    .wwa-content {
+        width: 366px;
+    }
+}
 </style>

@@ -196,9 +196,9 @@ html,body{
     }
 
     .wrapper {
-         width: 320px;
-         margin:0 auto;
-     }
+        width: 320px;
+        margin:0 auto;
+    }
 
     #bg_header {
         height: 98px;
@@ -324,5 +324,132 @@ html,body{
         width: 100px;
         left: 206px;
         top: 67px;
+    }
+}
+
+@media all and (min-width:321px) and (max-width: 768px) {
+    html, body {
+        width: 768px;
+        overflow: hidden;
+    }
+
+    .wrapper {
+        width: 768px;
+        margin:0 auto;
+    }
+
+    .container {
+        min-height: 754px;
+    }
+
+    #bg_header {
+        height: 153px;
+        background: url(images/768_menu.jpg);
+        position: relative;
+
+        overflow: hidden;
+
+        -webkit-transition: height 500ms;
+        -moz-transition:  height 500ms;
+        -ms-transition:  height 500ms;
+        -o-transition:  height 500ms;
+        transition:  height 500ms;
+    }
+
+    #bg_header.open {
+        height: 360px;
+    }
+
+    #social_top {
+        height: 0;
+    }
+
+    .toggle-header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70px;
+        height: 70px;
+    }
+
+    #navigation {
+        position: absolute;
+        width: 100%;
+        top: 152px;
+        height: auto;
+    }
+
+    #navigation a{
+        display: block;
+        float: none;
+        height: 30px;
+    }
+    #navigation a{
+        width: 100%;
+    }
+    #navigation a+a{
+        width: 100%;
+    }
+    #navigation a+a+a{
+        width: 100%;
+    }
+    #navigation a+a+a+a{
+        width: 100%;
+    }
+    #navigation a+a+a+a+a{
+        width: 100%;
+    }
+    #navigation a+a+a+a+a+a{
+        width: 100%;
+    }
+    #navigation a+a+a+a+a+a+a{
+        width: 100%;
+    }
+
+    /*****************/
+
+    .fixed-footer {
+        position: static;
+        width:100%;
+        line-height: 20px;
+        background: url(images/footerbg.jpg) repeat;
+        text-align: center;
+        font-size: 23px;
+        color: white;
+        padding: 16px;
+        font-weight: normal;
+        box-sizing: border-box;
+    }
+
+    #bt-nav {
+        padding: 0;
+        margin-top: 20px;
+        background: url(images/768_footer.jpg);
+        height: 49px;
+    }
+
+    #bt-nav a{
+        float: left;
+        height: 49px;
+
+        width: 86px;
+    }
+    #bt-nav a+a{
+        width: 110px;
+    }
+    #bt-nav a+a+a{
+        width: 146px;
+    }
+    #bt-nav a+a+a+a{
+        width: 103px;
+    }
+    #bt-nav a+a+a+a+a{
+        width: 121px;
+    }
+    #bt-nav a+a+a+a+a+a{
+        width: 72px;
+    }
+    #bt-nav a+a+a+a+a+a+a{
+        width: 130px;
     }
 }

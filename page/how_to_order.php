@@ -20,6 +20,9 @@
     <div class="hto320">
         <img src="images/hto/HowToOrder_320.jpg">
     </div>
+    <div class="hto768">
+        <img src="images/hto/HowToOrder_768.jpg">
+    </div>
 </div>
 
 <style type="text/css">
@@ -30,12 +33,33 @@
     .hto320 {
         display: none;
     }
+    .hto768 {
+        display: none;
+    }
     @media all and (max-width: 320px) {
         .hto {
             display: none;
         }
 
         .hto320 {
+            display: block;
+        }
+
+        .hto768 {
+            display: none;
+        }
+    }
+
+    @media all and (min-width:321px) and (max-width: 768px) {
+        .hto {
+            display: none;
+        }
+
+        .hto320 {
+            display: none;
+        }
+
+        .hto768 {
             display: block;
         }
     }
