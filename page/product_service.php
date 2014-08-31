@@ -83,9 +83,7 @@ require_once 'Manager.php';
                 foreach (Manager::getProductByGroupId($r['product_group_id']) as $a ) {
                     $picsHTML .= <<<HTML
                     <a rel="{$a['product_group_id']}" href="pictures/{$a['path']}"  title="{$r['product_name']}" class="swipebox" style="display: none;">
-	                    <img src="pictures/{$a['path']}" alt="image" style="-webkit-box-shadow: 4px 6px 3px 0px rgba(0,0,0,0.25);
--moz-box-shadow: 4px 6px 3px 0px rgba(0,0,0,0.25);
-box-shadow: 4px 6px 3px 0px rgba(0,0,0,0.25);">
+	                    <img src="pictures/{$a['path']}" alt="image" style="">
                     </a>
 HTML;
 
@@ -94,7 +92,7 @@ HTML;
             <div class="ex-item" style="text-align: center;">
                 <div>
                     <a rel="{$r['product_group_id']}" href="pictures/{$r['thumbnail']}" class="swipebox"  title="{$r['product_name']}">
-                    <img class="ex-item-img" src="pictures/{$r['thumbnail']}" width="460" alt="image" height="240" id="{$r['product_group_id']}">
+                    <img class="ex-item-img" src="pictures/{$r['thumbnail']}" alt="image" id="{$r['product_group_id']}">
 
                     </a>
                     {$picsHTML}
@@ -106,22 +104,13 @@ HTML;
             }
 
             ?>
-            <!--
-            <?php //for($i=0; $i< 10; $i++){?>
-            <div class="ex-item">
-                <div>
-                    <img src="images/pd/atotech2-B.jpg" width="230">
-                    <img src="images/pd/atotech2-F.jpg" width="230">
-                </div>
-                <div class="ex-item-name">Phi Phi Hotel Group</div>
-                <hr>
-            </div>
-            <?php //}?>
-        </div>
-        -->
         </div>
         <div class="clearfix"></div>
-        <div style="text-align: center"><a href="#" class="myButton loadmore">Load more...</a></div>
+        <div style="text-align: center">
+            <?php if(Manager::countProduct() > 4){?>
+            <a href="#" class="loadmore">Load more...</a>
+            <?php }?>
+        </div>
         <div class="clearfix"></div>
     </div>
     <style type="text/css">
@@ -134,6 +123,16 @@ HTML;
         }
         .pd-content p {
             padding: 12px 28px;
+        }
+
+        .loadmore {
+            width: 123px;
+            height: 67px;
+            background: url(images/pd/loadmore.jpg);
+            background-size: 100%;
+            display: block;
+            font-size: 0;
+            margin: 0 auto;
         }
 
         .ex-text {
@@ -160,11 +159,14 @@ HTML;
         .ex-item-name {
             text-align: center;
             font-size: 30px;
+            height: 31px;
         }
 
         .ex-item-img {
-            width: 230px;
-            box-shadow: 4px 6px 3px 0px rgba(0,0,0,0.25);
+            /*width: 230px;*/
+            /*box-shadow: 4px 6px 3px 0px rgba(0,0,0,0.25);*/
+            /*width: 460px;*/
+            /*height: 240px;*/
         }
 
         @media all and (max-width: 320px) {
@@ -210,17 +212,41 @@ HTML;
                 afterClose: function() {} // called after closing
             });
 
+            var wW = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+//            var wH = (window.innerHeight > 0) ? window.innerHeight : screen.height;
+            var imgW = 460;
+            var imgH = 240;
+
+            if(wW > 320 && wW <= 768){
+                imgW = 342;
+                imgH = 175;
+            }
+            else if(wW <= 320){
+                imgW = 266;
+                imgH = 138;
+            }
+
+            $('.ex-item-img').resizecrop({
+                width: imgW,
+                height: imgH,
+                vertical: "top"
+            });
+
             var page = 0;
             var listEl = $('#list-pd');
             $('.loadmore').click(function(e){
                 e.preventDefault();
                 page++;
                 $.get("loadmore.php?page="+page, function(data){
-                    for(var i in data){
-                        listEl.append(appendItem(data[i]));
+                    for(var i in data.data){
+                        listEl.append(appendItem(data.data[i]));
+                    }
+                    if(!data.next){
+                        $('.loadmore').hide();
                     }
                 }, 'json');
             });
+
 
             function appendItem(html){
                 var item = $(html);
@@ -233,6 +259,12 @@ HTML;
                     videoMaxWidth : 1140, // videos max width
                     beforeOpen: function() {}, // called before opening
                     afterClose: function() {} // called after closing
+                });
+
+                $('.ex-item-img', item).resizecrop({
+                    width: imgW,
+                    height: imgH,
+                    vertical: "top"
                 });
             }
         });

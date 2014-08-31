@@ -140,6 +140,12 @@ class Manager {
         $cn->query($sql2);
     }
 
+    public static function editProductByGroupId ($id, $params) {
+        $cn = self::getCn();
+        $sql = "UPDATE product_group_id SET product_name='{$params['product_name']}' WHERE product_group_id = ".$id;
+        $cn->query($sql);
+    }
+
     public static function addProductThumbnail ($file,$product_group_id) {
         $setting = self::getSetting();
         $dir = $setting['upload_dir'];
@@ -166,7 +172,15 @@ class Manager {
 
     public static function getProductGroupOffSet($offset) {
         $cn = self::getCn();
-        $sql = "SELECT * FROM `product_group_id` LIMIT 4 OFFSET ".$offset;
+        $sql = "SELECT * FROM `product_group_id` ORDER BY id DESC LIMIT 4 OFFSET ".$offset;
         return $cn->query($sql);
+    }
+
+    public static function countProduct(){
+        $cn = self::getCn();
+        $sql = "SELECT COUNT(*) as c FROM product_group_id";
+        $result = $cn->query($sql);
+        $c = $result->fetch(PDO::FETCH_ASSOC);
+        return $c['c'];
     }
 } 

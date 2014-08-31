@@ -57,6 +57,11 @@ HTML;
     foreach (Manager::getProductGroupId() as $r) {
         echo <<<HTML
         <div style="font-size: 30px;font-weight: bolder;">Product Name : {$r['product_name']}<a href="del_product_group.php?id={$r['product_group_id']}" class="btn btn-warning btn-large" style="margin-left: 20px;"><i class="icon-white icon-remove"></i> Remove Group</a></div>
+        <div>
+            <form action="edit_product.php?id={$r['product_group_id']}" method="post">
+                <input type="text" name="product_name" value="{$r['product_name']}"> <input type="submit" value="edit">
+            </form>
+        </div>
         <div><img src="../pictures/{$r['thumbnail']}" style="width: 300px;-webkit-box-shadow: 4px 6px 3px 0px rgba(0,0,0,0.25);-moz-box-shadow: 4px 6px 3px 0px rgba(0,0,0,0.25);box-shadow: 4px 6px 3px 0px rgba(0,0,0,0.25);margin: 20px;"/></div>
         <div>
             <form action="upload_thumbnail.php" method="post" enctype="multipart/form-data" name="form1" id="form1">

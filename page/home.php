@@ -80,9 +80,9 @@ HTML;
         </div>
         <div style="height: 54px;"></div>
         <div class="hct">
-            <div class="pull-left bt-t first"><img src="images/home/1/01home_09.jpg"><img src="images/home/1/01home_14.jpg"></div>
-            <div class="pull-left bt-t"><img src="images/home/1/01home_11.jpg"><img src="images/home/1/01home_14.jpg"></div>
-            <div class="pull-left bt-t"><img src="images/home/1/01home_13.jpg"><img src="images/home/1/01home_14.jpg"></div>
+            <div class="pull-left bt-t first"><a href="index.php?page=who_we_are"><img src="images/home/1/01home_09.jpg"><img src="images/home/1/01home_14.jpg"></a></div>
+            <div class="pull-left bt-t"><a href="index.php?page=product_service"><img src="images/home/1/01home_11.jpg"><img src="images/home/1/01home_14.jpg"></a></div>
+            <div class="pull-left bt-t"><a href="index.php?page=how_to_order"><img src="images/home/1/01home_13.jpg"><img src="images/home/1/01home_14.jpg"></a></div>
         </div>
         <div class="clearfix"></div>
     </div>

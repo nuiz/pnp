@@ -26,7 +26,7 @@
                 </span>
             </p>
             <p>
-                <label>E-mail:</label> <span class="orange">pnptextile@gmail.com</span><br />
+                <label>E-mail:</label> <a class="orange" href="mailto:pnptextitle@gmail.com">pnptextile@gmail.com</a><br />
                 <label>Tel:</label> 02-444-2326<br />
                 <label>Fax:</label> 02-809-8383<br />
             </p>

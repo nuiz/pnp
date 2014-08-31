@@ -12,6 +12,7 @@ session_start();
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/jquery.swipebox.min.js"></script>
+    <script src="js/jquery.resizecrop-1.0.3.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

@@ -10,6 +10,10 @@ return array(
     "upload_dir"=> dirname(__FILE__)."/pictures",
     "db"=> array(
         'host'=> 'localhost',
+//        'username'=> 'papangping_pnp',
+//        'password'=> '111111',
+//        'database'=> 'papangping_pnp'
+
         'username'=> 'root',
         'password'=> '111111',
         'database'=> 'pnp'

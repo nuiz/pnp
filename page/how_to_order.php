@@ -14,6 +14,9 @@
     <div style="margin-top: 23px;">
     </div>
     <div class="hto">
+        <a class="absolute-link absolute-link-mail" href="mailto:pnptextitle@gmail.com"></a>
+        <a class="absolute-link absolute-link-size" href="index.php?page=size_chart"></a>
+        <a class="absolute-link absolute-link-fabric" href="index.php?page=fabric"></a>
         <img src="images/hto/05HowToOrder_06.jpg">
         <img src="images/hto/05HowToOrder_07.jpg">
     </div>
@@ -28,14 +31,41 @@
 <style type="text/css">
     .hto {
         display: block;
+        position: relative;
     }
 
     .hto320 {
         display: none;
+        position: relative;
     }
     .hto768 {
         display: none;
+        position: relative;
     }
+
+    .absolute-link {
+        position: absolute;
+    }
+
+    .absolute-link-mail {
+        width: 228px;
+        height: 55px;
+        top: 506px;
+        left: 135px;
+    }
+    .absolute-link-size {
+        width: 92px;
+        height: 22px;
+        top: 621px;
+        left: 365px;
+    }
+    .absolute-link-fabric {
+        width: 120px;
+        height: 22px;
+        top: 621px;
+        left: 488px;
+    }
+
     @media all and (max-width: 320px) {
         .hto {
             display: none;
