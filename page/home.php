@@ -15,18 +15,21 @@ require_once 'Manager.php';
     <div>
         <style type="text/css">
             #slider1_container, div[u="slides"], #slider1_container div div {
-                width: 320px;
+                /*width: 320px;*/
+                width: 100%;
                 height: 133px;
             }
             @media all and (min-width: 768px) {
                 #slider1_container, div[u="slides"], #slider1_container div div {
-                    width: 768px;
+                    /*width: 768px;*/
+                    width: 100%;
                     height: 320px;
                 }
             }
             @media all and (min-width: 960px) {
                 #slider1_container, div[u="slides"], #slider1_container div div {
-                    width: 960px;
+                    /*width: 960px;*/
+                    width: 100%;
                     height: 400px;
                 }
             }
@@ -89,6 +92,7 @@ HTML;
 </div>
 <script>
     jQuery(document).ready(function ($) {
+        $();
         var options = {
             $BulletNavigatorOptions: {
                 $Class: $JssorBulletNavigator$,

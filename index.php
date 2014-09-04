@@ -7,7 +7,7 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>PNP : TEXTILE CO., LTD</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
     <link rel="stylesheet" href="css/swipebox.min.css">
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
@@ -27,13 +27,13 @@ session_start();
         <div id="social_top" class="pull-right"><a href="" style="display: block; height: 100%;"></a></div>
         <div class="clearfix"></div>
         <div id="navigation">
-            <a href="index.php?page=home"></a>
-            <a href="index.php?page=who_we_are"></a>
-            <a href="index.php?page=product_service"></a>
-            <a href="index.php?page=size_chart"></a>
-            <a href="index.php?page=how_to_order"></a>
-            <a href="index.php?page=fabric"></a>
-            <a href="index.php?page=contact"></a>
+            <a href="index.php?page=home" class="<?php if(@$_GET['page']=='home') echo 'active';?>">HOME</a>
+            <a href="index.php?page=who_we_are" class="<?php if(@$_GET['page']=='who_we_are') echo 'active';?>">WHO WE ARE</a>
+            <a href="index.php?page=product_service" class="<?php if(@$_GET['page']=='product_service') echo 'active';?>">PRODUCT & SERVICE</a>
+            <a href="index.php?page=size_chart" class="<?php if(@$_GET['page']=='size_chart') echo 'active';?>">SIZE CHART</a>
+            <a href="index.php?page=how_to_order" class="<?php if(@$_GET['page']=='how_to_order') echo 'active';?>">HOW TO ORDER</a>
+            <a href="index.php?page=fabric" class="<?php if(@$_GET['page']=='fabric') echo 'active';?>">FABRIC</a>
+            <a href="index.php?page=contact" class="<?php if(@$_GET['page']=='contact') echo 'active';?>">CONTACT US</a>
         </div>
     </div>
 </div>
@@ -42,13 +42,13 @@ session_start();
 </div>
 <div class="wrapper">
     <div id="bt-nav">
-        <a href="index.php?page=home"></a>
-        <a href="index.php?page=who_we_are"></a>
-        <a href="index.php?page=product_service"></a>
-        <a href="index.php?page=size_chart"></a>
-        <a href="index.php?page=how_to_order"></a>
-        <a href="index.php?page=fabric"></a>
-        <a href="index.php?page=contact"></a>
+        <a href="index.php?page=home" class="<?php if(@$_GET['page']=='home') echo 'active';?>">Home</a>
+        <a href="index.php?page=who_we_are" class="<?php if(@$_GET['page']=='who_we_are') echo 'active';?>">Who We Are</a>
+        <a href="index.php?page=product_service" class="<?php if(@$_GET['page']=='product_service') echo 'active';?>">Product & Service</a>
+        <a href="index.php?page=size_chart" class="<?php if(@$_GET['page']=='size_chart') echo 'active';?>">Size Chart</a>
+        <a href="index.php?page=how_to_order" class="<?php if(@$_GET['page']=='how_to_order') echo 'active';?>">How To Order</a>
+        <a href="index.php?page=fabric" class="<?php if(@$_GET['page']=='fabric') echo 'active';?>">Fabric</a>
+        <a href="index.php?page=contact" class="<?php if(@$_GET['page']=='contact') echo 'active';?>">Contact Us</a>
     </div>
 </div>
 <div class="fixed-footer">
