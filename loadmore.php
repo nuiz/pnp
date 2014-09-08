@@ -8,7 +8,7 @@
 
 include_once 'Manager.php';
 
-$offset = $_GET['page']*4;
+$offset = $_GET['page']*6;
 $pgs = Manager::getProductGroupOffSet($offset)->fetchAll(PDO::FETCH_ASSOC);
 
 $data = array();
@@ -40,5 +40,5 @@ HTML;
     $data[] = $html;
 }
 
-$next = Manager::countProduct() > ($offset+4)? true: false;
+$next = Manager::countProduct() > ($offset+6)? true: false;
 echo json_encode(array('data'=> $data, 'next'=> $next));

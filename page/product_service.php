@@ -64,8 +64,11 @@ require_once 'Manager.php';
 
 <div>
     <div class="pnp-gray-bg" style="height: 25px;"></div>
-    <div>
-        <img src="images/wwa/wwa-header.jpg">
+    <div class="header-default">
+        <img src="images/pd/header.jpg">
+    </div>
+    <div class="header-320">
+        <img src="images/pd/pd-header_320.jpg">
     </div>
     <div>
         <div class="pull-left pd-content">
@@ -107,13 +110,21 @@ HTML;
         </div>
         <div class="clearfix"></div>
         <div style="text-align: center">
-            <?php if(Manager::countProduct() > 4){?>
+            <?php if(Manager::countProduct() > 6){?>
             <a href="#" class="loadmore">Load more...</a>
             <?php }?>
         </div>
         <div class="clearfix"></div>
     </div>
     <style type="text/css">
+        .header-default {
+            display: block;
+        }
+
+        .header-320 {
+            display: none;
+        }
+
         .bt-t {
             margin-left: 15px;
             width: 310px;
@@ -170,6 +181,14 @@ HTML;
         }
 
         @media all and (max-width: 320px) {
+            .header-default {
+                display: none;
+            }
+
+            .header-320 {
+                display: block;
+            }
+
             .ex-item-img {
                 /*width: 150px;*/
             }

@@ -7,7 +7,7 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>PNP : TEXTILE CO., LTD</title>
-    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/style.css?v=0.11">
     <link rel="stylesheet" href="css/swipebox.min.css">
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
@@ -24,7 +24,13 @@ session_start();
     <div id="bg_header" class="wrapper">
         <a href="" class="toggle-header"></a>
         <a href=""><div id="logo" class="pull-left"></div></a>
-        <div id="social_top" class="pull-right"><a href="" style="display: block; height: 100%;"></a></div>
+        <div id="social_top" class="pull-right" style="position: relative;">
+            <a href="https://www.facebook.com/pnppologroup?ref=profile" style="display: block;
+position: absolute;
+bottom: 15px;
+width: 30px;
+height: 40px;
+left: 4px;"></a></div>
         <div class="clearfix"></div>
         <div id="navigation">
             <a href="index.php?page=home" class="<?php if(@$_GET['page']=='home') echo 'active';?>">HOME</a>
@@ -35,6 +41,7 @@ session_start();
             <a href="index.php?page=fabric" class="<?php if(@$_GET['page']=='fabric') echo 'active';?>">FABRIC</a>
             <a href="index.php?page=contact" class="<?php if(@$_GET['page']=='contact') echo 'active';?>">CONTACT US</a>
         </div>
+        <div class="bt-fixed-header pnp-gray-bg"></div>
     </div>
 </div>
 <div class="wrapper container">

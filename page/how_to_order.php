@@ -8,8 +8,11 @@
 ?>
 <div>
     <div class="pnp-gray-bg" style="height: 25px;"></div>
-    <div>
+    <div class="header-default">
         <img src="images/hto/05HowToOrder_03.jpg">
+    </div>
+    <div class="header-320">
+        <img src="images/hto/hto-header.jpg">
     </div>
     <div style="margin-top: 23px;">
     </div>
@@ -29,6 +32,14 @@
 </div>
 
 <style type="text/css">
+    .header-default {
+        display: block;
+    }
+
+    .header-320 {
+        display: none;
+    }
+
     .hto {
         display: block;
         position: relative;
@@ -67,6 +78,14 @@
     }
 
     @media all and (max-width: 320px) {
+        .header-default {
+            display: none;
+        }
+
+        .header-320 {
+            display: block;
+        }
+
         .hto {
             display: none;
         }

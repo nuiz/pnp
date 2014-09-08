@@ -8,8 +8,11 @@
 ?>
 <div>
     <div class="pnp-gray-bg" style="height: 25px;"></div>
-    <div>
+    <div class="header-default">
         <img src="images/fab/06Fabric_03.jpg">
+    </div>
+    <div class="header-320">
+        <img src="images/fab/fab-header_320.jpg">
     </div>
     <div class="fab-warp">
         <div class="pull-left fab-content">
@@ -29,7 +32,16 @@
     </div>
 </div>
 <style type="text/css">
-.fab-content {
+    .header-default {
+        display: block;
+    }
+
+    .header-320 {
+        display: none;
+    }
+
+
+    .fab-content {
     width: 690px;
     font-size: 22px;
     color: #4f453f;
@@ -50,6 +62,15 @@
 }
 
 @media all and (max-width: 320px) {
+    .header-default {
+        display: none;
+    }
+
+    .header-320 {
+        display: block;
+    }
+
+
     .fab-warp {
         display: none;
     }

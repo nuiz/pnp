@@ -8,9 +8,13 @@
 ?>
 <div>
     <div class="pnp-gray-bg" style="height: 25px;"></div>
-    <div>
+    <div class="header-default">
         <img src="images/contact/07ContactUs_03.jpg">
     </div>
+    <div class="header-320">
+        <img src="images/contact/contact-header.jpg">
+    </div>
+
     <div>
         <div class="pull-left ct-content">
             <p>
@@ -44,6 +48,14 @@
     </div>
 </div>
 <style type="text/css">
+    .header-default {
+        display: block;
+    }
+
+    .header-320 {
+        display: none;
+    }
+
 .orange {
     color: #e0922f;
 }
@@ -112,6 +124,14 @@ a.orange {
         clear: both;
         margin: 0 auto;
         width: 300px;
+    }
+
+    .header-default {
+        display: none;
+    }
+
+    .header-320 {
+        display: block;
     }
 }
 @media all and (min-width:321px) and (max-width: 768px) {

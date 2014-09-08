@@ -172,7 +172,7 @@ class Manager {
 
     public static function getProductGroupOffSet($offset) {
         $cn = self::getCn();
-        $sql = "SELECT * FROM `product_group_id` ORDER BY id DESC LIMIT 4 OFFSET ".$offset;
+        $sql = "SELECT * FROM `product_group_id` ORDER BY id DESC LIMIT 6 OFFSET ".$offset;
         return $cn->query($sql);
     }
 

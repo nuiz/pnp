@@ -8,8 +8,11 @@
 ?>
 <div>
     <div class="pnp-gray-bg" style="height: 25px;"></div>
-    <div>
+    <div class="header-default">
         <img src="images/chart/04SizeChart_03.jpg">
+    </div>
+    <div class="header-320">
+        <img src="images/chart/chart-header_320.jpg">
     </div>
     <div class="chart">
         <img src="images/chart/04SizeChart_05.jpg">
@@ -23,6 +26,14 @@
     </div>
 </div>
 <style type="text/css">
+
+    .header-default {
+        display: block;
+    }
+
+    .header-320 {
+        display: none;
+    }
     .chart {
         display: block;
     }
@@ -34,6 +45,14 @@
         display: none;
     }
 @media all and (max-width: 320px) {
+    .header-default {
+        display: none;
+    }
+
+    .header-320 {
+        display: block;
+    }
+
     .chart {
         display: none;
     }

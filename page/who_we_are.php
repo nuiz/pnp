@@ -8,8 +8,11 @@
 ?>
 <div>
     <div class="pnp-gray-bg" style="height: 25px;"></div>
-    <div>
+    <div class="header-default">
         <img src="images/wwa/wwa-header.jpg">
+    </div>
+    <div class="header-320">
+        <img src="images/wwa/wwa-header_320.jpg">
     </div>
     <div>
         <div class="pull-left wwa-content" style="">
@@ -44,9 +47,26 @@
     margin-top: 30px;
 }
 
+.header-default {
+    display: block;
+}
+
+.header-320 {
+    display: none;
+}
+
 @media all and (max-width: 320px) {
     .wwa-content {
         width: auto;
+    }
+
+
+    .header-default {
+        display: none;
+    }
+
+    .header-320 {
+        display: block;
     }
 }
 
