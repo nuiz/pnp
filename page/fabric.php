@@ -25,9 +25,17 @@
         <div class="clearfix"></div>
     </div>
     <div class="fab-warp320">
+        <div class="pull-left fab-content">
+            <p>ผ้าที่นำมาใช้ผลิต เสื้อยืดคอกลม และเสื้อ POLO สามารถแบ่งได้หลายประเภทตามลักษณะของเส้นด้าย
+                ผ้าถูกแบ่งเป็นหลักๆ 4 ประเภท ตามตารางดังต่อไปนี้</p>
+        </div>
         <img src="images/fab/Fabric_320.jpg">
     </div>
     <div class="fab-warp768">
+        <div class="fab-content">
+            <p>ผ้าที่นำมาใช้ผลิต เสื้อยืดคอกลม และเสื้อ POLO สามารถแบ่งได้หลายประเภทตามลักษณะของเส้นด้าย
+                ผ้าถูกแบ่งเป็นหลักๆ 4 ประเภท ตามตารางดังต่อไปนี้</p>
+        </div>
         <img src="images/fab/Fabric_768.jpg">
     </div>
 </div>
@@ -41,7 +49,7 @@
     }
 
 
-    .fab-content {
+.fab-content {
     width: 690px;
     font-size: 22px;
     color: #4f453f;
@@ -82,6 +90,10 @@
         display: none;
     }
 
+    .fab-content {
+        width: 100%;
+    }
+
 }
 @media all and (min-width:321px) and (max-width: 768px) {
     .fab-warp {
@@ -93,6 +105,12 @@
     }
     .fab-warp768 {
         display: block;
+    }
+
+
+
+    .fab-content {
+        width: 100%;
     }
 
 }
