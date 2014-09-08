@@ -171,6 +171,7 @@ HTML;
             text-align: center;
             font-size: 30px;
             height: 31px;
+            margin-top: 10px;
         }
 
         .ex-item-img {
@@ -202,6 +203,10 @@ HTML;
             .ex-item:nth-child(2n-1){
                 margin-left: auto;
             }
+
+            .ex-item-name {
+                font-size: 24px;
+            }
         }
 
         @media all and (min-width:321px) and (max-width: 768px) {
@@ -211,11 +216,15 @@ HTML;
 
             .ex-item {
                 width: 356px;
-                margin-left: 28px;
+                margin-left: 14px;
             }
 
             .ex-item:nth-child(2n-1){
                 margin-left: 28px;
+            }
+
+            .ex-item-name {
+                font-size: 24px;
             }
         }
     </style>
@@ -231,8 +240,11 @@ HTML;
                 afterClose: function() {} // called after closing
             });
 
-            var wW = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+//            var wW = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 //            var wH = (window.innerHeight > 0) ? window.innerHeight : screen.height;
+//
+            var wW = $(window).width();
+            var wH = $(window).height();
             var imgW = 460;
             var imgH = 240;
 
@@ -248,7 +260,8 @@ HTML;
             $('.ex-item-img').resizecrop({
                 width: imgW,
                 height: imgH,
-                vertical: "top"
+                vertical: "top",
+                zoom: false
             });
 
             var page = 0;

@@ -7,7 +7,7 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>PNP : TEXTILE CO., LTD</title>
-    <link rel="stylesheet" href="css/style.css?v=0.11">
+    <link rel="stylesheet" href="css/style.css?v=0.16">
     <link rel="stylesheet" href="css/swipebox.min.css">
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
